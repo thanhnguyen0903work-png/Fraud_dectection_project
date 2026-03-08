@@ -51,5 +51,5 @@ After rigorous tuning and testing on unseen data, the model achieved the followi
 3. Open the Jupyter Notebook to view the analysis or use `joblib.load()` to run the pre-trained model on new data.
 
 ---
-**Author:** [Your Name]  
+**Author:**Thanh(Billy) Nguyen
 **Field:** Data Science / Financial Risk Audit
