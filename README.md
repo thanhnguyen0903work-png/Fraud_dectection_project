@@ -33,9 +33,27 @@ After rigorous tuning and testing on unseen data, the model achieved the followi
 | **Precision (Class 1)** | **82%** | High confidence in fraud alerts, reducing "cry wolf" scenarios. |
 | **False Positives** | **17** | Only 17 out of 56,864 genuine transactions were flagged (0.03%). |
 
-> **Key Insight:** The model provides a high-confidence security layer, catching 4 out of every 5 frauds without bothering 99.9% of the bank's honest customers.
+> note: Due to the extreme class imbalance, accuracy is not a meaningful metric. 
+The model is evaluated primarily using Recall, Precision, and False Positive Rate.
+
+> **Key Insight:** The model successfully detects over 80% of fraudulent transactions while maintaining an extremely low false positive rate (0.03%), making it suitable for real-world deployment in high-volume transaction systems.
+
+## ⚖️ Precision vs Recall Trade-off
+
+Fraud detection prioritises **Recall**, as missing fraudulent transactions leads to direct financial loss.
+
+However, increasing Recall may increase False Positives, requiring manual review.
+
+This model achieves a balanced trade-off:
+- High Recall (82%) → strong fraud detection
+- Low False Positive Rate (0.03%) → minimal disruption to legitimate users
 
 ---
+## 🧪 Future Improvements
+
+- Implement real-time inference pipeline using APIs
+- Apply cost-sensitive learning to directly optimise financial impact
+- Explore XGBoost or LightGBM for improved performance
 
 ## 📁 Project Structure
 - `notebooks/`: Contains the full EDA, training, and GridSearchCV process.
